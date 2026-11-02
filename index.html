@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Routine Tracker</title>
+<meta name="description" content="A private daily routine and habit tracker. Works offline. Data stays on your phone.">
+<meta name="theme-color" id="theme-color" content="#F3F6FA">
+<meta name="color-scheme" content="light dark">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Routine">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="banner"></div>
+<main id="view" tabindex="-1"><p class="loading">Opening your routine.</p></main>
+<div id="toast" role="status" aria-live="polite"></div>
+<div id="live" class="sr-only" role="status" aria-live="polite"></div>
+<nav id="tabs" aria-label="Main">
+  <button type="button" data-act="tab" data-tab="today" aria-current="page"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Today</span></button>
+  <button type="button" data-act="tab" data-tab="calendar"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><rect x="4" y="5.5" width="16" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M4 10h16M8.5 3.5v4M15.5 3.5v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><span>Calendar</span></button>
+  <button type="button" data-act="tab" data-tab="progress"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><path d="M5 19V12M12 19V5M19 19v-9" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></svg><span>Progress</span></button>
+  <button type="button" data-act="tab" data-tab="goals"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="3.5" fill="none" stroke="currentColor" stroke-width="2"/></svg><span>Goals</span></button>
+  <button type="button" data-act="tab" data-tab="settings"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><path d="M5 7h14M5 12h14M5 17h14" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><circle cx="9" cy="7" r="2" fill="var(--surface)" stroke="currentColor" stroke-width="2"/><circle cx="15" cy="12" r="2" fill="var(--surface)" stroke="currentColor" stroke-width="2"/><circle cx="8" cy="17" r="2" fill="var(--surface)" stroke="currentColor" stroke-width="2"/></svg><span>Settings</span></button>
+</nav>
+<div id="modal-root"></div>
+<noscript><p style="padding:16px">Routine Tracker needs JavaScript to run.</p></noscript>
+<script src="js/version.js"></script>
+<script src="js/dates.js"></script>
+<script src="js/data.js"></script>
+<script src="js/logic.js"></script>
+<script src="js/db.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/today.js"></script>
+<script src="js/progress.js"></script>
+<script src="js/goals.js"></script>
+<script src="js/alarms.js"></script>
+<script src="js/settings.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
